@@ -1,0 +1,35 @@
+.header {
+    grid-column: full-start / full-end;
+
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: repeat(auto-fit, minmax(90rem, 100vw));
+        width: 100vw;
+    }
+
+    
+
+    &__box {
+        background-image: url(/img/background-1.jpg);
+        width: 100%;
+        background-size: cover;
+        background-position: top;
+        display: block;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 65%;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 100vw;
+            height: 65%;
+        }
+    }
+}

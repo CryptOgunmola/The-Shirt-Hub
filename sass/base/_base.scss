@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; //1rem = 8px
+    }
+
+    @media only screen and (max-width: $bp-mid) {
+        font-size: 37.5%; //1rem = 6px
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 25%; //1rem = 4px
+    }
+}
+
+body {
+    box-sizing: inherit;
+    background-color: $color-secondary;
+}

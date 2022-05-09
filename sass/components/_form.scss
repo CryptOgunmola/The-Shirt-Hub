@@ -1,0 +1,42 @@
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        background-color: $color-secondary;
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .5);
+            border-bottom: 3px solid $color-green;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-red;
+        }
+
+        &::placeholder {
+            opacity: 1;
+        }
+    } 
+
+    &__label {
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .2s;
+    }
+
+    &__input:placeholder-shown + &__label { // & because both input and label are siblings in the markup. Has to be in order too 
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

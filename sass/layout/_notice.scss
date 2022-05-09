@@ -1,0 +1,8 @@
+.notice {
+    grid-column: full-start / full-end;
+    padding: 2.5rem;
+    padding-bottom: 3rem;
+    background-color: $color-primary;
+
+    @include flex-position;
+}

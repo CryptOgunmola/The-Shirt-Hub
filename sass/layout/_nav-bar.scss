@@ -1,0 +1,10 @@
+.nav {
+    grid-column: full-start / full-end;
+    background-color: $color-primary;
+    
+    border-top-width: .1rem;
+    border-top-style: solid;
+    border-top-color: $color-black;
+}
+
+

@@ -1,0 +1,23 @@
+@mixin flex-position {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin font-style {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@mixin shirts-hover {
+    &:hover .img {
+        filter: blur(10px);
+    }
+
+    &:hover .img-price {
+        opacity: 1;
+        transform: translateY(-6rem);
+        z-index: 5;
+    }
+}
